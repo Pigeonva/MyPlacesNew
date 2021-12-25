@@ -13,10 +13,9 @@ struct Place {
     var image: String
     
     static let restaurantNames = [
-        "Burger Heroes", "Kitchen", "Bonsai", "Дастархан",
-        "Индокитай", "X.O", "Балкан Гриль", "Sherlock Holmes",
-        "Speak Easy", "Morris Pub", "Вкусные истории",
-        "Классик", "Love&Life", "Шок", "Бочка"
+        "Mcdonalds", "Burgerking", "KGB", "Hinkalnaya",
+        "Shaurma 1", "Dobraya", "Tatmak", "KFC", "Kayot",
+        "Zhar pizza", "Volna"
     ]
     
     static func getPlaces() -> [Place] {
@@ -24,7 +23,7 @@ struct Place {
         var places = [Place]()
         
         for place in restaurantNames {
-            places.append(Place(name: place, location: "Уфа", type: "Ресторан", image: place))
+            places.append(Place(name: place, location: "Казань", type: "Ресторан", image: place))
         }
         
         return places
