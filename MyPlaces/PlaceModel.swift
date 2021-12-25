@@ -3,14 +3,15 @@
 //  MyPlaces
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     
     var name: String
-    var location: String
-    var type: String
-    var image: String
+    var location: String?
+    var type: String?
+    var image: UIImage?
+    var restaurantImage: String?
     
     static let restaurantNames = [
         "Mcdonalds", "Burgerking", "KGB", "Hinkalnaya",
@@ -23,7 +24,10 @@ struct Place {
         var places = [Place]()
         
         for place in restaurantNames {
-            places.append(Place(name: place, location: "Казань", type: "Ресторан", image: place))
+            places.append(Place(name: place, location: "Казань",
+                                type: "Ресторан",
+                                image: nil,
+                                restaurantImage: place))
         }
         
         return places
