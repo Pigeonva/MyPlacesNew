@@ -68,7 +68,7 @@
                                     <outlet property="locationLabel" destination="4Bu-7L-Etc" id="nkm-hQ-JuW"/>
                                     <outlet property="nameLabel" destination="S8b-2a-ghw" id="gUe-xI-cdr"/>
                                     <outlet property="typeLabel" destination="ea0-fR-FLL" id="YRn-lo-2LD"/>
-                                    <segue destination="xWI-zA-cEc" kind="show" id="dBJ-B7-2eB"/>
+                                    <segue destination="xWI-zA-cEc" kind="show" identifier="showDetail" id="dBJ-B7-2eB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,10 +77,10 @@
                             <outlet property="delegate" destination="BHk-PS-XbR" id="s5X-X1-aYG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Places" id="UTG-XJ-IHj">
+                    <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="UTG-XJ-IHj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="g1R-Ol-t2L">
                             <connections>
-                                <segue destination="PmZ-hg-zRt" kind="presentation" identifier="showDetail" modalTransitionStyle="crossDissolve" id="9vz-2s-ApQ"/>
+                                <segue destination="PmZ-hg-zRt" kind="presentation" identifier="" modalTransitionStyle="crossDissolve" id="9vz-2s-ApQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -234,7 +234,7 @@
                             <outlet property="delegate" destination="xWI-zA-cEc" id="3cE-un-XqA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="20R-bY-uKJ">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="20R-bY-uKJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="QWd-8A-Con">
                             <connections>
                                 <action selector="canceAction:" destination="xWI-zA-cEc" id="wJB-Yz-Sb4"/>
@@ -263,8 +263,8 @@
         <scene sceneID="3KM-Cz-T7c">
             <objects>
                 <navigationController id="jB0-m8-nVp" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="McE-tP-Bgi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="McE-tP-Bgi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="24"/>
@@ -298,7 +298,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dBJ-B7-2eB"/>
+        <segue reference="h2Z-2n-txc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
