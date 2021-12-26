@@ -26,6 +26,7 @@ class NewPlaceViewController: UITableViewController {
             self.newPlace.savePlaces()
         }
         
+        
         tableView.tableFooterView = UIView()
         
         saveButton.isEnabled = false
