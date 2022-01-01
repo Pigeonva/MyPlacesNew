@@ -72,7 +72,7 @@ class NewPlaceViewController: UITableViewController {
         if imageIsChanged {
             image = placeImage.image
         } else {
-            image = UIImage(named: "imagePlaceholder")
+            image = #imageLiteral(resourceName: "imagePlaceholder")
         }
         
         let imageData = image?.pngData()
@@ -101,10 +101,10 @@ class NewPlaceViewController: UITableViewController {
     
     private func setupEditScreen() {
         
-        setupNavigationBar()
-        imageIsChanged = true
-        
         if currentPlace != nil {
+            
+            setupNavigationBar()
+            imageIsChanged = true
             
             guard let data = currentPlace?.imageData, let image = UIImage(data: data) else {return}
             
