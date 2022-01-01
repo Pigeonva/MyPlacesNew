@@ -193,6 +193,9 @@
                                     <segment title="Data"/>
                                     <segment title="Name"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortSelection:" destination="iY2-IO-fIN" eventType="valueChanged" id="qZF-eO-PT2"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E4w-W7-70y">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
@@ -273,7 +276,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="4dY-3T-RpT">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="XPQ-fb-sn1"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="AZ" id="XPQ-fb-sn1">
+                            <connections>
+                                <action selector="reversedSorting:" destination="iY2-IO-fIN" id="xbE-Eg-b2V"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="EdO-Ur-UQX">
                             <connections>
                                 <segue destination="PmZ-hg-zRt" kind="presentation" id="OfI-5F-PFe"/>
@@ -281,6 +288,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="reversedBarButton" destination="XPQ-fb-sn1" id="9jd-gi-o3F"/>
+                        <outlet property="segmentedControl" destination="FBS-6c-JKQ" id="vTn-LY-vd3"/>
                         <outlet property="tableView" destination="E4w-W7-70y" id="qfh-w5-VTx"/>
                     </connections>
                 </viewController>
