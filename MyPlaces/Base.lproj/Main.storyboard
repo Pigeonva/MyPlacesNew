@@ -153,7 +153,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GFZ-pk-qIg" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="252" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GFZ-pk-qIg" customClass="RatingControl" customModule="MyPlaces" customModuleProvider="target">
                                                     <rect key="frame" x="81" y="48" width="252" height="44"/>
                                                 </stackView>
                                             </subviews>
@@ -215,7 +215,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E4w-W7-70y">
-                                <rect key="frame" x="0.0" y="120" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="776"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3FZ-T1-9do" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
@@ -289,7 +289,7 @@
                             <constraint firstItem="E4w-W7-70y" firstAttribute="top" secondItem="FBS-6c-JKQ" secondAttribute="bottom" constant="1" id="hPd-eX-cu1"/>
                             <constraint firstAttribute="trailing" secondItem="FBS-6c-JKQ" secondAttribute="trailing" id="hq9-4b-7GO"/>
                             <constraint firstItem="75y-wM-cHo" firstAttribute="trailing" secondItem="E4w-W7-70y" secondAttribute="trailing" id="o9d-Zd-E6j"/>
-                            <constraint firstItem="75y-wM-cHo" firstAttribute="bottom" secondItem="E4w-W7-70y" secondAttribute="bottom" id="rle-hY-7x0"/>
+                            <constraint firstAttribute="bottom" secondItem="E4w-W7-70y" secondAttribute="bottom" id="rle-hY-7x0"/>
                             <constraint firstItem="FBS-6c-JKQ" firstAttribute="top" secondItem="75y-wM-cHo" secondAttribute="top" id="sUI-NH-33V"/>
                         </constraints>
                     </view>
@@ -353,6 +353,11 @@
             <point key="canvasLocation" x="1358" y="-753"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="GFZ-pk-qIg">
+            <size key="intrinsicContentSize" width="252" height="44"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="uIh-hL-zPA"/>
     </inferredMetricsTieBreakers>

@@ -3,7 +3,6 @@
 //  MyPlaces
 //
 //  Created by Артур Фомин on 01.01.2022.
-//  Copyright © 2022 Alexey Efimov. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +10,8 @@ import UIKit
 @IBDesignable class RatingControl: UIStackView {
     
     //MARK: properties
+    
+    var raiting = 0
     
     private var raitingButtons = [UIButton]()
     
@@ -24,8 +25,6 @@ import UIKit
             setupButtons()
         }
     }
-    
-    var raiting = 0
 
     //MARK: initialization
     
@@ -57,11 +56,30 @@ import UIKit
         
         raitingButtons.removeAll()
         
+        //Load button image
+        let bundle = Bundle(for: type(of: self))
+        let filledStar = UIImage(named: "filledStar",
+                                 in: bundle,
+                                 compatibleWith: self.traitCollection)
+        
+        let emptyStar = UIImage(named: "emptyStar",
+                                in: bundle,
+                                compatibleWith: self.traitCollection)
+        
+        let highlightedStar = UIImage(named: "highlightedStar",
+                                      in: bundle,
+                                      compatibleWith: self.traitCollection)
+        
         for _ in 1...starCount {
             
             // Create the button
             let button = UIButton()
-            button.backgroundColor = .red
+            
+            //Set the button image
+            button.setImage(emptyStar, for: .normal)
+            button.setImage(filledStar, for: .selected )
+            button.setImage(highlightedStar, for: .highlighted)
+            button.setImage(highlightedStar, for: [.highlighted, .selected])
             
             //Add constrains
             button.translatesAutoresizingMaskIntoConstraints = false
