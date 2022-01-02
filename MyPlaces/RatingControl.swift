@@ -11,7 +11,11 @@ import UIKit
     
     //MARK: properties
     
-    var raiting = 0
+    var raiting = 0 {
+        didSet{
+            updateButtonSelectionState()
+        }
+    }
     
     private var raitingButtons = [UIButton]()
     
@@ -40,7 +44,15 @@ import UIKit
     
     @objc func ratingButtonTapped(button: UIButton){
         
-        print("Button pressed!!!")
+        guard let index = raitingButtons.firstIndex(of: button) else {return}
+        
+        //Calculate the rating of the selected button
+        let selectedRaiting = index + 1
+        if selectedRaiting == raiting {
+            raiting = 0
+        } else {
+            raiting = selectedRaiting
+        }
         
     }
     
@@ -95,6 +107,13 @@ import UIKit
             //Add the new button on the raiting button array
             raitingButtons.append(button)
             
+        }
+        updateButtonSelectionState()
+    }
+    
+    private func updateButtonSelectionState() {
+        for (index, button) in raitingButtons.enumerated() {
+            button.isSelected = index < raiting
         }
     }
 }
