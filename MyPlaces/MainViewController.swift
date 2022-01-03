@@ -25,6 +25,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableView: UITableView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var reversedBarButton: UIBarButtonItem!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         cell.imageOfPlace.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
         cell.imageOfPlace.clipsToBounds = true
+         cell.ratingInCell.raiting = Int(place.rating)
 
         return cell
     }
