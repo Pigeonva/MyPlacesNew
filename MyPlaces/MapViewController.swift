@@ -11,7 +11,7 @@ import RealmSwift
 
 class MapViewController: UIViewController {
     
-    var place: Place!
+    var place = Place()
     let annotationIdentifier = "annotationIdentifier"
 
     @IBOutlet var mapView: MKMapView!
@@ -71,7 +71,7 @@ extension MapViewController: MKMapViewDelegate {
             imageView.layer.cornerRadius = 10
             imageView.clipsToBounds = true
             imageView.image = UIImage(data: imageData)
-            annotationView?.rightCalloutAccessoryView = imageView 
+            annotationView?.rightCalloutAccessoryView = imageView
         }
         
         return annotationView
