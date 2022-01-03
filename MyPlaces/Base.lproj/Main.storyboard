@@ -247,6 +247,9 @@
                             <constraint firstItem="vNg-hb-55b" firstAttribute="leading" secondItem="uVQ-1G-38R" secondAttribute="leading" id="ogR-Rq-VzX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="vNg-hb-55b" id="vkq-Zx-myl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O42-eF-smr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
