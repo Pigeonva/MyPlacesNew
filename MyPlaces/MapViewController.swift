@@ -14,6 +14,7 @@ class MapViewController: UIViewController {
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.00
 
     @IBOutlet var mapView: MKMapView!
     
@@ -23,6 +24,15 @@ class MapViewController: UIViewController {
         setupPlacemark()
         checkLocationServices()
     }
+    @IBAction func centerViewInUserLocation() {
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
     @IBAction func closVC() {
         dismiss(animated: true)
     }
@@ -59,7 +69,10 @@ class MapViewController: UIViewController {
             setupLocationManager()
             checkLocationAuthorization()
         } else {
-            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Location Services are disabled",
+                               message: "To enable it go: Settings -> Privacy -> Location Services and turn On")
+            }
         }
     }
     
@@ -73,18 +86,33 @@ class MapViewController: UIViewController {
             mapView.showsUserLocation = true
             break
         case .denied:
-            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Your Location is not availble",
+                               message: "To give permission go to: Settings -> MyPlaces -> Location")
+            }
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
             break
         case .restricted:
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlert(title: "Location Services are disabled",
+                               message: "To enable it go: Settings -> Privacy -> Location Services and turn On")
+            }
             break
         case .authorizedAlways:
             break
         @unknown default:
             print("New case is availible")
         }
+    }
+    private func showAlert(title: String, message: String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
