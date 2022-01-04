@@ -158,7 +158,7 @@
                                                         <constraint firstAttribute="width" constant="22" id="sIv-0a-8Mu"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="Placeholder"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="Placeholder" title=" "/>
                                                     <connections>
                                                         <segue destination="di5-o8-S2e" kind="presentation" identifier="getAdress" modalPresentationStyle="fullScreen" id="fwj-Q4-WCg"/>
                                                     </connections>
@@ -279,7 +279,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Hg4-7a-5xd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <buttonConfiguration key="configuration" style="plain" title=" ">
                                     <backgroundConfiguration key="background" image="Location"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -309,7 +309,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="qlT-qY-ThL"/>
                     <connections>
-                        <outlet property="adressLabel" destination="IGG-GF-XNw" id="kkq-wE-Qh4"/>
+                        <outlet property="addressLabel" destination="IGG-GF-XNw" id="kkq-wE-Qh4"/>
                         <outlet property="doneButton" destination="l5p-mK-GeX" id="vOy-BF-iSD"/>
                         <outlet property="mapPinImage" destination="Q5K-mB-OHc" id="kBf-dZ-AuW"/>
                         <outlet property="mapView" destination="vNg-hb-55b" id="vkq-Zx-myl"/>
