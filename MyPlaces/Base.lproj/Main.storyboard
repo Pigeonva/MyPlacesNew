@@ -32,9 +32,9 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JR-ER-ekU">
-                                                    <rect key="frame" x="304" y="189" width="78" height="50"/>
+                                                    <rect key="frame" x="332" y="189" width="50" height="50"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="LsC-DA-c9S"/>
+                                                        <constraint firstAttribute="width" constant="50" id="LsC-DA-c9S"/>
                                                         <constraint firstAttribute="height" constant="50" id="oJy-hW-KP0"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
@@ -116,12 +116,26 @@
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwo-RF-PwO">
+                                                    <rect key="frame" x="384" y="47" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="mzd-Uq-Mg7"/>
+                                                        <constraint firstAttribute="width" constant="22" id="sIv-0a-8Mu"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="Placeholder" title=" "/>
+                                                    <connections>
+                                                        <segue destination="di5-o8-S2e" kind="presentation" identifier="getAdress" modalPresentationStyle="fullScreen" id="fwj-Q4-WCg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="FRb-qI-YcE" firstAttribute="top" secondItem="fcM-eo-ELe" secondAttribute="top" constant="8" id="98m-cl-fE9"/>
                                                 <constraint firstItem="FRb-qI-YcE" firstAttribute="leading" secondItem="fcM-eo-ELe" secondAttribute="leading" constant="16" id="GJq-9T-Dgw"/>
                                                 <constraint firstAttribute="trailing" secondItem="FRb-qI-YcE" secondAttribute="trailing" constant="16" id="Vbk-fd-ePW"/>
+                                                <constraint firstAttribute="trailing" secondItem="zwo-RF-PwO" secondAttribute="trailing" constant="8" id="Vms-pU-tJP"/>
                                                 <constraint firstAttribute="bottom" secondItem="FRb-qI-YcE" secondAttribute="bottom" constant="4" id="eUF-bo-HgA"/>
+                                                <constraint firstItem="zwo-RF-PwO" firstAttribute="centerY" secondItem="4ck-sG-1zk" secondAttribute="centerY" id="pOH-PE-7qy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -151,25 +165,11 @@
                                                         </textField>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwo-RF-PwO">
-                                                    <rect key="frame" x="372" y="46.5" width="22" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="mzd-Uq-Mg7"/>
-                                                        <constraint firstAttribute="width" constant="22" id="sIv-0a-8Mu"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="Placeholder" title=" "/>
-                                                    <connections>
-                                                        <segue destination="di5-o8-S2e" kind="presentation" identifier="getAdress" modalPresentationStyle="fullScreen" id="fwj-Q4-WCg"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="uEU-X1-94L" firstAttribute="top" secondItem="IuQ-cn-p1E" secondAttribute="top" constant="8" id="Cmj-Sy-DKx"/>
-                                                <constraint firstItem="zwo-RF-PwO" firstAttribute="centerY" secondItem="03B-gn-Ygo" secondAttribute="centerY" id="hbb-iM-qpP"/>
                                                 <constraint firstItem="uEU-X1-94L" firstAttribute="leading" secondItem="IuQ-cn-p1E" secondAttribute="leading" constant="16" id="ji6-i4-f7v"/>
                                                 <constraint firstAttribute="bottom" secondItem="uEU-X1-94L" secondAttribute="bottom" constant="4" id="sDQ-dy-a4h"/>
-                                                <constraint firstAttribute="trailing" secondItem="zwo-RF-PwO" secondAttribute="trailing" constant="20" symbolic="YES" id="xnT-J2-DeO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -262,21 +262,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5p-mK-GeX">
-                                <rect key="frame" x="160" y="772" width="94" height="50"/>
+                                <rect key="frame" x="155" y="766" width="104.5" height="56"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="doneButtonPressed" destination="di5-o8-S2e" eventType="touchUpInside" id="z8y-Hu-vWn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNW-zU-PQX">
-                                <rect key="frame" x="344" y="679" width="30" height="30"/>
+                                <rect key="frame" x="339" y="674" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="AhD-y3-c7n"/>
-                                    <constraint firstAttribute="height" constant="30" id="Hg4-7a-5xd"/>
+                                    <constraint firstAttribute="width" constant="35" id="AhD-y3-c7n"/>
+                                    <constraint firstAttribute="height" constant="35" id="Hg4-7a-5xd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=" ">
